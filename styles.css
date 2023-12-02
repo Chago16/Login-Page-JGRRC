@@ -1,0 +1,70 @@
+@import url('https://fonts.google.com/specimen/League+Spartan');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan';
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo {
+    max-width: 100px;
+}
+
+.nav a {
+    position: relative;
+    font-size: 1.2em;
+    margin-left: 40px;
+    text-decoration: none;
+    color: #FFF;
+}
+
+/* TO DO: nav hover and clicked and active effects */ 
+
+.loginpanel {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('Photos/BackgroundGC.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 80px 200px;
+}
+
+.loginpanel .welcome {
+
+    width: 400px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: League Spartan;
+    font-size: 85px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
+.loginpanel .welcome2 {
+    color: #FFF;
+    width: 430px;
+    font-family: League Spartan;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #FFF;
+}
