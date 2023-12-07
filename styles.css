@@ -12,7 +12,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    padding: 15px;
+    padding: 10px 40px;
 
     display: flex;
     justify-content: space-between;
@@ -30,9 +30,28 @@
     margin-left: 40px;
     text-decoration: none;
     color: #FFF;
+    transition: font-size 0.5s;
 }
 
-/* TO DO: nav hover and clicked and active effects */ 
+nav a:hover {
+    font-size: 1.5em;
+    transition: .5s;
+}
+
+.nav a::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background: #FFF;
+    transform: scaleX(0);
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+}
 
 .loginpanel {
     position: relative;
@@ -42,8 +61,10 @@
     background-size: cover;
     background-position: center;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding: 80px 200px;
+    padding-left: 13%;
+    padding-right: 13%;
 }
 
 .loginpanel .welcome {
@@ -52,7 +73,7 @@
     flex-shrink: 0;
     color: #FFF;
     font-family: League Spartan;
-    font-size: 85px;
+    font-size: 4.5em;
     font-style: normal;
     font-weight: 900;
     line-height: normal;
@@ -69,9 +90,9 @@
     color: #FFF;
 }
 
-.rightpanel {
-
-
+.loginpanel .rightpanel {
+    position: relative;
+    width: 440px;
 }
 
 .signin {
@@ -81,4 +102,133 @@
     font-style: normal;
     font-weight: 800;
     line-height: normal;
+}
+
+.rightpanel h2{
+    font-size: 2em;
+    color: #FFF;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.rightpanel .inputbox {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 30px;
+}
+
+.inputbox input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid #FFF;
+    outline: none;
+    border-radius: 55px;
+    font-size: 1em;
+    color: #FFF;
+    padding-left: 45px;
+}
+
+.inputbox label {
+    position: absolute;
+    top: 50%;
+    left: 45px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #FFF;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.inputbox input:focus~label,
+.inputbox input:hover~label,
+.inputbox input:not(:placeholder-shown)~label {
+    font-size: .9em;
+    top: -14px;
+    left: 17px;
+}
+
+.inputbox .icon {
+    position: absolute;
+    top: 14px;
+    left: 18px;
+    font-size: 1.2em;
+    color: #FFF;
+}
+
+.inputbox .icon2 {
+    position: absolute;
+    top: 14px;
+    right: 18px;
+    font-size: 1.2em;
+    color: #FFF;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.rightpanel .rem-forgot {
+    font-size: .9em;
+    color: #FFF;
+    font-weight: 500px;
+    margin-top: -15px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rem-forgot label input {
+    accent-color: #071333;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.rem-forgot a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.rem-forgot a:hover {
+    color: #FFF;
+    text-decoration: underline;
+}
+
+.rightpanel .btn {
+    margin-top: 14px;
+    width: 100%;
+    height: 45px;
+    border: none;
+    outline: none;
+    border-radius: 55px;
+    font-size: 1.5em;
+    color: #071333;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #071333;
+    font-size: 1.5em;
+    color: #fff;
+    font-weight: 700;
+    transition: .5s;
+}
+
+.rightpanel .signup {
+    font-size: .9em;
+    color: #FFF;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.signup p a {
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.signup a:hover {
+    text-decoration: underline;
 }
